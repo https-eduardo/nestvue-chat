@@ -1,0 +1,20 @@
+import { createApp } from 'vue';
+import App from './App.vue';
+import router from './router';
+import store from './store';
+import BaseButton from './components/Base/BaseButton.vue';
+import BaseInput from './components/Base/BaseInput.vue';
+import BaseForm from './components/Base/BaseForm.vue';
+import BaseSelect from './components/Base/BaseSelect.vue';
+import BaseNotification from './components/Base/BaseNotification.vue';
+import './assets/styles/global.css';
+
+const app = createApp(App);
+app.use(store);
+app.use(router);
+app.component('BaseButton', BaseButton);
+app.component('BaseInput', BaseInput);
+app.component('BaseForm', BaseForm);
+app.component('BaseSelect', BaseSelect);
+app.component('BaseNotification', BaseNotification);
+app.mount('#app');
